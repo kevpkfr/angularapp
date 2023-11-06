@@ -25,4 +25,5 @@ import { RouterModule } from '@angular/router';
     CategoriesComponent
   ]
 })
+
 export class PagesModule { }

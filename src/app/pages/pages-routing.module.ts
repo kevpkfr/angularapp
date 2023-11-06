@@ -8,11 +8,11 @@ import { CategoriesComponent } from './categories/categories.component';
 const routes: Routes = [
   //rutas protegidas
   {
-    path: 'dashboard', component: PagesComponent,
+    path: 'dashboard', component: PagesComponent,//ruta padre PagesComponent
     children: [
       { path: '', component: DashboardComponent },
-      { path: 'products', component: ProductsComponent },
-      { path: 'categories', component: CategoriesComponent },
+      { path: 'products', component: ProductsComponent },//rutas hijas ProductsComponent
+      { path: 'categories', component: CategoriesComponent },//rutas hijas CategoriesComponent
       { path:'', redirectTo:'/dashboard', pathMatch:'full'},
     ]
   },
@@ -28,4 +28,5 @@ const routes: Routes = [
     RouterModule
   ]
 })
+
 export class PagesRoutingModule { }

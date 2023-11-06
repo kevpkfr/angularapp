@@ -7,22 +7,23 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
+
 export class ProductComponent implements OnInit {
 
-  constructor(private  httpClient: HttpClient){
+  constructor(private httpClient: HttpClient) {
 
   }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.getProducts();
   }
 
-  getProducts(){
+  getProducts() {
 
     const response = this.httpClient.get("http://escuelajs.co/api/v1/products").subscribe
-           ( response => {
-      console.log(response);
-    })
+      (response => {
+        console.log(response);
+      })
 
 
 
